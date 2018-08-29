@@ -19,5 +19,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Model\City.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\Result.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\WeatherCondition.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RefreshCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\TemperatureToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\WeatherVM.cs" />
   </ItemGroup>
 </Project>
