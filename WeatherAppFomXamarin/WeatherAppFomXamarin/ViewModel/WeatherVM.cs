@@ -24,12 +24,9 @@ namespace WeatherAppFomXamarin
 
         public WeatherCondition WeatherCondition { get; set; }
         public ObservableCollection<Result> Results { get; set; }
-        private RefreshCommand refresh;
-
         public RefreshCommand RefreshWeather { get; set; }
-      
 
-
+  
 
         private string query;
         public string Query
@@ -58,27 +55,19 @@ namespace WeatherAppFomXamarin
 
         public WeatherVM()
         {
+            
             WeatherCondition = new WeatherCondition();
             WeatherCondition.Temperature = new Temperature
             {
                 Imperial = new Imperial { Value = 0 }
             };
-            Results = new ObservableCollection<Result>()
-            {
-                new Result
-                {
-                    LocalizedName = "Krakow",
-                    Key = "274455"
-                    
-                    
-                },
-                 new Result
-                {
-                    LocalizedName = "Warszawa"
-                }
-            };
+            Results = new ObservableCollection<Result>();
+           
+           
             RefreshWeather = new RefreshCommand(this);
-             
+
+
+
         }
 
         async Task<WeatherCondition> GetWeatherConditionAsync(string cityKey)
@@ -146,8 +135,13 @@ namespace WeatherAppFomXamarin
             //    WeatherCondition.Temperature = weather.Temperature;
             //    WeatherCondition.WeatherText = weather.WeatherText;
 
+
+
+
+            //    SelectedResult.LocalizedName = "krakow";
+
             WeatherCondition.Temperature.Imperial.Value = 23;
-            WeatherCondition.WeatherText = "Updated Sunny";
+            WeatherCondition.WeatherText = " Sunny";
 
 
         }

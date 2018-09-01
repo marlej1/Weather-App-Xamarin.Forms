@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Data\ISQLiteDB.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -25,5 +26,19 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RefreshCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\TemperatureToStringConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\WeatherVM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WeatherDetailPage.xaml.cs">
+      <DependentUpon>WeatherDetailPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)WeatherTextToBackgroundConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)WeatherDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\sunny.jpg" />
   </ItemGroup>
 </Project>

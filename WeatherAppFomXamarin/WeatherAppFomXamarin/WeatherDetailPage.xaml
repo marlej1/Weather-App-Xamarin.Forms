@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherAppFomXamarin.WeatherDetailPage"
+             xmlns:local="clr-namespace:WeatherAppFomXamarin"
+           BackgroundImage="{Binding  Source={x:Reference WeatherTextLbl}, Path=Text, Converter={StaticResource WeatherTextToBackground}}"
+            
+             
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:WeatherTextToBackgroundConverter x:Key="WeatherTextToBackground"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="4*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Krakow" FontSize="25" Grid.Column="1"
+                   HorizontalOptions="CenterAndExpand" Margin="5"
+                   VerticalOptions="CenterAndExpand"
+                   x:Name="CityNameLbl"
+                   ></Label>
+
+            <Image x:Name="myImage"></Image>
+
+            <StackLayout  Grid.Column="1" Grid.Row="1">
+
+                <Label Text="25 C" FontSize="60" 
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Start"
+                  
+                        x:Name="TemperatureLbl"
+                   ></Label>
+                <Label Text="cos rainy tam" FontSize="Default" FontAttributes="Bold" 
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Start"                 
+                        x:Name="WeatherTextLbl"
+                   ></Label>
+            </StackLayout>
+            
+            
+
+            
+
+
+        </Grid>
+
+
+      
+    </ContentPage.Content>
+</ContentPage>

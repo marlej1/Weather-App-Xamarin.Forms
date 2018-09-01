@@ -13,7 +13,7 @@ namespace WeatherAppFomXamarin
 		{
 			InitializeComponent();
 
-			MainPage = new WeatherAppFomXamarin.MainPage();
+            MainPage = new WeatherDetailPage();
 		}
 
 		protected override void OnStart ()

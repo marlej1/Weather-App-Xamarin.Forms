@@ -4,8 +4,22 @@
              xmlns:local="clr-namespace:WeatherAppFomXamarin"
              x:Class="WeatherAppFomXamarin.MainPage">
 
-    <Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+
+    <StackLayout x:Name="myStackLayout">
+
+        <SearchBar Placeholder="Search for a city.." PlaceholderColor="LightBlue" TextChanged="SearchBar_TextChanged"></SearchBar>
+
+
+        <ListView x:Name="ListofResults" SeparatorVisibility="Default" SeparatorColor="Gray" ItemSelected="ListofResults_ItemSelected"> 
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding LocalizedName}" Detail="{Binding Country.LocalizedName}" ></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </StackLayout>
+   
 
 </ContentPage>
