@@ -11,10 +11,14 @@ using Xamarin.Forms.Xaml;
 
 namespace WeatherAppFomXamarin
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+
+    //ContentPage that displays the list of favorites in a listView
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class FavoritesPage : ContentPage
 	{
 
+
+        
         private SQLiteConnection _connection;
         private ObservableCollection<Result> _resultstCollection;
         public FavoritesPage ()

@@ -12,6 +12,9 @@ using SQLite;
 
 namespace WeatherAppFomXamarin
 {
+
+    //Page that display the waether details of the selected city.
+
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class WeatherDetailPage : ContentPage
 	{
@@ -57,6 +60,9 @@ namespace WeatherAppFomXamarin
 
 
         }
+
+        //Button clicked evnt hadler that checks if the selected city is already addded to a list of favorites in database.
+        //if yes it  removes the city, if no it adds the city adn displays the appropriate alert message.
 
         private void Button_Clicked(object sender, EventArgs e)
         {

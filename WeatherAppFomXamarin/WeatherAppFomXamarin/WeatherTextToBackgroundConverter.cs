@@ -6,6 +6,11 @@ using Xamarin.Forms;
 
 namespace WeatherAppFomXamarin
 {
+
+    //coverter that checks the weather text of the selected city and display the appropiate background image from a local resources
+    //  (resources/drawable folder)
+    // if there is no matching string in the weather text it displays sunny image by default.
+
     class WeatherTextToBackgroundConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
