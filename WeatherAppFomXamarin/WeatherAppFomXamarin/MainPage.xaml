@@ -18,6 +18,8 @@
             </ListView.ItemTemplate>
         </ListView>
 
+        <Button x:Name="Favorites" Text="Go to Favorites" Clicked="Favorites_Clicked" BackgroundColor="DarkGreen"></Button>
+
 
     </StackLayout>
    

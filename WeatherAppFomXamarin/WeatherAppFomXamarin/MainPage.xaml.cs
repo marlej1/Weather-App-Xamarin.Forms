@@ -20,106 +20,14 @@ namespace WeatherAppFomXamarin
 		{
 			InitializeComponent();      
             
-           // ListofResults.ItemsSource = GetResults();
+          
 
 
-        }
-
-
-        private IEnumerable<Result> GetResults()
-        {
-            List<Result> results = new List<Result>
-            {
-                new Result
-                {
-                    LocalizedName="Krasnoyarsk",
-                    Key = "293708",
-                    Type = "City",
-                    Rank = 21,
-                    Country = new Country
-                    {
-                        ID = "RU",
-                        LocalizedName = "Russia"
-                    },
-                    AdministrativeArea = new AdministrativeArea
-                    {
-                        ID = "KYA",
-                        LocalizedName = "Krasnoyarsk"
-                    }
-
-
-                },
-                 new Result
-                {
-                    LocalizedName="Krakow",
-                    Key = "274455",
-                    Type = "City",
-                    Rank = 3,
-                    Country = new Country
-                    {
-                        ID = "Po",
-                        LocalizedName = "Poland"
-                    },
-                    AdministrativeArea = new AdministrativeArea
-                    {
-                        ID = "Mal",
-                        LocalizedName = "Malopolska"
-                    }
-
-
-                },
-
-                     new Result
-                {
-                    LocalizedName="Warszawa",
-                    Key = "274663",
-                    Type = "City",
-                    Rank = 3,
-                    Country = new Country
-                    {
-                        ID = "Po",
-                        LocalizedName = "Poland"
-                    },
-                    AdministrativeArea = new AdministrativeArea
-                    {
-                        ID = "Mal",
-                        LocalizedName = "Mazowieckie"
-                    }
-
-
-                },
-
-                            new Result
-                {
-                    LocalizedName="Warrington",
-                    Key = "331331",
-                    Type = "City",
-                    Rank = 3,
-                    Country = new Country
-                    {
-                        ID = "UK",
-                        LocalizedName = "United Kingdom"
-                    },
-                    AdministrativeArea = new AdministrativeArea
-                    {
-                        ID = "WRT",
-                        LocalizedName = "Warrington"
-                    }
-
-
-                }
-            };
-
-           
-
-
-            return results;
         }
 
         private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
         {           
 
-        // ListofResults.ItemsSource = GetResults().Where(r => r.LocalizedName.Contains(e.NewTextValue)).ToList();
 
          ListofResults.ItemsSource = await GetMatchingLocationNames(e.NewTextValue);
         }
@@ -174,5 +82,9 @@ namespace WeatherAppFomXamarin
             return result[0];
         }
 
+        private async void Favorites_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FavoritesPage());
+        }
     }
 }

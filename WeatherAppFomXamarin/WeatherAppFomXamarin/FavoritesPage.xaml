@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherAppFomXamarin.FavoritesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="List of Favorites"></Label>
+            <StackLayout Orientation="Horizontal">
+ 
+                
+            </StackLayout>
+            <ListView x:Name="resultsListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding LocalizedName}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

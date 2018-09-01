@@ -17,15 +17,16 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Data\ISQLiteDB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FavoritesPage.xaml.cs">
+      <DependentUpon>FavoritesPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Model\City.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Result.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\WeatherCondition.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\RefreshCommand.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\TemperatureToStringConverter.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\WeatherVM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WeatherDetailPage.xaml.cs">
       <DependentUpon>WeatherDetailPage.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -40,5 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\sunny.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)FavoritesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

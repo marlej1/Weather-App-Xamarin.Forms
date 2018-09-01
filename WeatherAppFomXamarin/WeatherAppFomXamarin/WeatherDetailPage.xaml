@@ -27,6 +27,8 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
+            <Button Text="Add/Remove from Favorites" VerticalOptions="Start" Grid.Column="1" BackgroundColor="White" TextColor="Black" Clicked="Button_Clicked"></Button>
+
             <Label Text="Krakow" FontSize="25" Grid.Column="1"
                    HorizontalOptions="CenterAndExpand" Margin="5"
                    VerticalOptions="CenterAndExpand"
@@ -47,17 +49,22 @@
                    HorizontalOptions="CenterAndExpand"
                    VerticalOptions="Start"                 
                         x:Name="WeatherTextLbl"
-                   ></Label>
+                   >
+                    
+                </Label>
+
             </StackLayout>
-            
-            
 
             
+
+
+
+
 
 
         </Grid>
 
 
-      
+
     </ContentPage.Content>
 </ContentPage>
